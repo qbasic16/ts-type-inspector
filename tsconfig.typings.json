@@ -4,7 +4,7 @@
     "module": "ESNext",
     "removeComments": false,
     "declaration": true,
-    "declarationDir": "dist/typings",
+    "declarationDir": "./dist/typings",
     "emitDeclarationOnly": true,
   }
 }
