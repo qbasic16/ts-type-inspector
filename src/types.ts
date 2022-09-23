@@ -1,5 +1,5 @@
 import type { ArrayItem, MinArray } from 'ts-lib-extended';
-import { ValidationError } from './error';
+import type { ValidationError } from './error';
 
 export type MethodLike = (...args_: any[]) => any;
 export type ObjectLike = Record<PropertyKey, any>;

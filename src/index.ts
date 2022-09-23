@@ -1,9 +1,11 @@
 import { TypeInspector } from './inspector';
+
 export type {
   AnyLike,
   ArrayItemValidator,
-  ArrayItemValidatorArray,
+  ArrayItemValidatorArray, // deprecated
   CustomValidation,
+  DateLike,
   MethodLike,
   ObjectLike,
   PropertyValidators,
@@ -12,11 +14,11 @@ export type {
   UnitedValidators,
   UnitedValidatorsItem,
   Validatable,
-  ValidationCondition,
-  DateLike
+  ValidationCondition
 } from './types';
-export {
-  TypeInspector
-};
+
+export { ValidationError } from './error';
+export { Validator } from './validator/index';
+export { TypeInspector };
 
 export default new TypeInspector();
