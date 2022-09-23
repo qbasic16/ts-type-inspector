@@ -1,4 +1,5 @@
-import { email, uri } from '@sideway/address';
+import sidewayAddress from '@sideway/address';
+import { URL } from 'url';
 import { Validator } from '.';
 import type { Validatable } from '../types';
 
@@ -275,13 +276,13 @@ export class StringValidator
   }
 
   private checkEmail(value_: string): void {
-    if (!email.isValid(value_)) {
+    if (!sidewayAddress.email.isValid(value_)) {
       this.throwValidationError('string is not an email address');
     }
   }
 
   private checkUri(value_: string): void {
-    if (!uri.regex({ allowQuerySquareBrackets: true }).regex.test(value_)) {
+    if (!sidewayAddress.uri.regex({ allowQuerySquareBrackets: true }).regex.test(value_)) {
       this.throwValidationError('string is not a uri');
     }
   }
