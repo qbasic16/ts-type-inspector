@@ -4,5 +4,11 @@
     "target": "ES2015",
     "module": "CommonJS",
     "outDir": "dist/cjs"
+  },
+  "include": [
+    "src"
+  ],
+  "ts-node": {
+    "transpileOnly": true
   }
 }
