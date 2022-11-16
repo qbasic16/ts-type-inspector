@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypeInspector = exports.Validator = exports.ValidationError = void 0;
+const inspector_1 = require("./inspector");
+Object.defineProperty(exports, "TypeInspector", { enumerable: true, get: function () { return inspector_1.TypeInspector; } });
+var error_1 = require("./error");
+Object.defineProperty(exports, "ValidationError", { enumerable: true, get: function () { return error_1.ValidationError; } });
+var index_1 = require("./validator/index");
+Object.defineProperty(exports, "Validator", { enumerable: true, get: function () { return index_1.Validator; } });
+exports.default = new inspector_1.TypeInspector();
