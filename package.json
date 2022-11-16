@@ -1,6 +1,6 @@
 {
   "name": "ts-type-inspector",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Type safe tool for value validation",
   "files": [
     "dist"
@@ -9,13 +9,11 @@
     "import": "./dist/esm2021/index.js",
     "require": "./dist/cjs/index.js"
   },
-  "types": "./dist/typings",
   "scripts": {
-    "build": "npm run build:clean && npm run build:cjs && npm run build:esm2021 && npm run build:typings",
+    "build": "npm run build:clean && npm run build:cjs && npm run build:esm2021",
     "build:clean": "npx --quiet rimraf dist/",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
-    "build:esm2021": "tsc -p ./tsconfig.esm2021.json && echo {\"type\":\"module\"} > dist/esm2021/package.json",
-    "build:typings": "tsc -p ./tsconfig.typings.json",
+    "build:esm2021": "tsc -p ./tsconfig.esm2021.json && echo {\"type\":\"module\",\"types\":\".\"} > dist/esm2021/package.json",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",

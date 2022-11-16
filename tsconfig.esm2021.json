@@ -3,7 +3,9 @@
   "compilerOptions": {
     "target": "ES2021",
     "module": "ESNext",
-    "outDir": "dist/esm2021"
+    "outDir": "dist/esm2021",
+    "declaration": true,
+    "declarationMap": true
   },
   "include": [
     "src"
